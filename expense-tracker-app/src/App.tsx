@@ -38,10 +38,15 @@ const Dictaphone: FC<DictaphoneProps> = () => {
   // Type assertion for startListening and stopListening options if you were to pass them
   // For the current use case, we are calling them without options directly.
   const handleStartListening = () => {
-    // You can pass options here if needed, e.g., SpeechRecognition.startListening({ continuous: true })
-    console.log("start button pressed")
-    SpeechRecognition.startListening({continuous: true});
+    console.log("Start button clicked");
+    try {
+      SpeechRecognition.startListening({ continuous: true });
+      console.log("Listening started");
+    } catch (error) {
+      console.error("Failed to start listening:", error);
+    }
   };
+
 
   const handleStopListening = () => {
     SpeechRecognition.stopListening();
