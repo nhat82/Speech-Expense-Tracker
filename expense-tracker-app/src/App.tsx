@@ -39,6 +39,7 @@ const Dictaphone: FC<DictaphoneProps> = () => {
   // For the current use case, we are calling them without options directly.
   const handleStartListening = () => {
     // You can pass options here if needed, e.g., SpeechRecognition.startListening({ continuous: true })
+    console.log("start button pressed")
     SpeechRecognition.startListening({continuous: true});
   };
 
