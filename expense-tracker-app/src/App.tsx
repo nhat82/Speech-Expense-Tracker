@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import type { FC } from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import type {ListeningOptions} from 'react-speech-recognition'
+// import type {ListeningOptions} from 'react-speech-recognition'
 import './App.css'
 
 interface DictaphoneProps {} // Define props interface if your component will receive any props
